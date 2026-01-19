@@ -206,3 +206,81 @@ p {
     margin-left: 20px; /* reset spacing for mobile */
   }
 }
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Hide vertical PORTFOLIO text on mobile */
+  .side-label {
+    display: none;
+  }
+
+  /* Container spacing */
+  .container {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  /* Name */
+  header.container h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 6px;
+  }
+
+  /* Section headings */
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  /* About text */
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .subT {
+    font-size: 0.9rem;
+  }
+
+  /* Work cards */
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  /* Contact section */
+  .contact {
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .contact a {
+    font-size: 0.9rem;
+  }
+
+  /* Phone number */
+  .phone-number {
+    font-size: 0.95rem;
+  }
+}

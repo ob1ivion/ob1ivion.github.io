@@ -114,3 +114,32 @@ body {
   height: auto;
   display: block;
 }
+@media (max-width: 768px) {
+
+  .page-header h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .back-wrapper {
+    margin: 24px 16px;
+  }
+
+  .back-link {
+    font-size: 0.95rem;
+  }
+
+  .sheet-canvas {
+    padding: 0 12px 40px;
+  }
+
+  .sheet-image {
+    width: 100%;
+    height: auto;
+  }
+}

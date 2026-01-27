@@ -16,8 +16,8 @@ body {
 /* Layout */
 .container {
   max-width: 900px;
-  margin: 60px 0 60px 120px;
-  padding-right: 20px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
 /* Headings */
@@ -138,7 +138,7 @@ p {
 /* Mobile number */
 .mobile {
   margin-bottom: 20px;
-  color: #ff7b00;
+  color: #f57905;
   font-size: 1.1rem;
 }
 
@@ -222,10 +222,11 @@ p {
   }
 
   /* Container spacing */
-  .container {
-    text-align: justify;
-    text-justify: inter-word;
-  }
+.container {
+  margin: 40px auto;
+  text-align: justify;
+}
+
 
   /* Name */
   header.container h1 {

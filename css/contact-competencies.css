@@ -1,0 +1,184 @@
+/* =========================
+   CONTACT SECTION
+   ========================= */
+
+.contact-section {
+  margin-top: 100px;
+}
+
+.contact-sub {
+  margin-bottom: 64px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.contact-row {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.contact-row a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.95rem;
+}
+
+.contact-row img {
+  width: 42px;
+  height: 42px;
+}
+
+.contact-row a:hover span {
+  text-decoration: underline;
+}
+
+/* =========================
+   COMPETENCIES SECTION
+   ========================= */
+
+.competencies-section {
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.competencies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+  margin-top: 24px;
+}
+
+.competencies-grid div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.competencies-grid img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .competencies-grid {
+    gap: 16px;
+  }
+}
+/* =========================
+   SECTION ALIGNMENT
+   ========================= */
+
+.contact-section,
+.competencies-section {
+  text-align: center;
+}
+
+/* Center inner rows */
+.contact-row {
+  justify-content: center;
+}
+/* =========================
+   DIVIDER LINE
+   ========================= */
+
+.section-divider {
+  width: 40%;
+  height: 1px;
+  background: #000000;
+  margin: 60px auto;   /* 👈 THIS CENTERS IT */
+  opacity: 0.18;
+}
+/* =========================
+   FOOTER (CENTERED)
+   ========================= */
+
+.site-footer {
+  width: 100%;
+  margin-top: 120px;
+  padding: 40px 0;
+
+  display: flex;
+  justify-content: center;   /* 👈 horizontal center */
+  align-items: center;
+
+  text-align: center;
+  font-size: 0.85rem;
+  color: #26119e;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+/* =====================
+   COMPETENCIES SECTION
+   ===================== */
+
+.competencies-section {
+  text-align: center;
+}
+
+/* Grid layout */
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 28px;
+
+  justify-items: center;
+  align-items: center;
+
+  max-width: 900px;
+  margin: 60px auto 0;   /* 👈 THIS CREATES GAP BELOW TITLE */
+}
+
+
+/* Individual competency */
+.competencies-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* 👈 centers icon + text */
+  text-align: center;
+}
+
+/* Icons */
+.competencies-grid img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+}
+
+/* Text */
+.competencies-grid span {
+  font-family: 'Roboto', sans-serif;  /* 👈 CHANGE */
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000;
+}
+

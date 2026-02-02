@@ -1,0 +1,92 @@
+/* =========================
+   BIG CINEMATIC STRIP SLIDER
+   ========================= */
+
+.strip-slider {
+  width: 100vw;
+  margin: 80px 0;
+
+  /* full-bleed */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* VIEWPORT (THIS DEFINES ARROW POSITION) */
+.strip-viewport {
+  position: relative;
+  width: 100%;
+  height: 520px;          /* 👈 IMPORTANT */
+  overflow: hidden;
+}
+
+/* MOVING STRIP */
+.strip-track {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* IMAGE ITEM */
+.strip-item {
+  flex: 0 0 620px;
+  height: 520px;          /* 👈 MATCH VIEWPORT */
+  overflow: hidden;
+}
+
+/* IMAGE */
+.strip-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   ARROWS (WHITE, BIG, CLEAN)
+   ========================= */
+
+.strip-nav {
+  display: none;
+}
+
+.strip-nav.left {
+  left: 32px;
+}
+
+.strip-nav.right {
+  right: 32px;
+}
+
+/* HOVER */
+.strip-nav:hover {
+  opacity: 0.85;
+}
+
+/* CLICK ANIMATION */
+.strip-nav.left:active {
+  transform: translate(-12px, -50%);
+}
+
+.strip-nav.right:active {
+  transform: translate(12px, -50%);
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  .strip-viewport {
+    height: 280px;
+  }
+
+  .strip-item {
+    height: 280px;
+    flex: 0 0 360px;
+  }
+
+  .strip-nav {
+    font-size: 44px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}

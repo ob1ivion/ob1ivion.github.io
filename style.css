@@ -1,0 +1,452 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  background: #ffffff;
+  color: #505050;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: left;
+  transform: translateX(0px); /* to accommodate the left sidebar */
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.subtitle {
+  color: #616161;
+  font-size: 1.1rem;
+}
+
+/* Section titles */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Paragraph text */
+p {
+  color: #000000;
+  text-align: justify;
+  text-justify: inter-word;
+
+}
+
+/* Highlight subtitle */
+.subT {
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* ===================== */
+/* CARDS */
+/* ===================== */
+.card {
+  background: #e6e6e6;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 0px solid #080808;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  color: #505050;
+}
+
+/* Card links */
+.card-link {
+  text-decoration: none;
+  display: block;
+}
+
+/* Interactive card behavior */
+.card-link .card {
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.card-link .card {
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+.card-link .card:hover {
+  transform: translateY(-4px);
+  background: #d0d0d0;
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.18),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.35),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.35);
+}
+.card-link .card:active {
+  transform: translateY(-1px);
+  background: #c8c8c8;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 0 rgba(0, 0, 0, 0.25),
+    inset -2px -2px 0 rgba(255, 255, 255, 0.25);
+}
+.card-link .card {
+  will-change: transform, box-shadow;
+}
+
+/* ===================== */
+/* CONTACT */
+/* ===================== */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+}
+
+.contact img {
+  width: 48px;
+  height: 48px;
+  opacity: 0.85;
+}
+
+.contact a:hover img {
+  opacity: 1;
+}
+
+.contact a:hover span {
+  text-decoration: underline;
+}
+
+/* Mobile number */
+.mobile {
+  margin-bottom: 20px;
+  color: #f57905;
+  font-size: 1.1rem;
+}
+
+.phone-number {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.5px;
+}
+/* Arrow indicator for clickable cards */
+.card h3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card .arrow {
+  font-size: 1.1rem;
+  opacity: 0.6;
+  transform: translateX(0);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Animate arrow on hover */
+.card-link .card:hover .arrow {
+  transform: translateX(4px);
+  opacity: 1;
+}
+/* ===================== */
+/* LEFT VERTICAL LABEL */
+/* ===================== */
+.side-label {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 90px;
+  height: 100vh;
+
+  background: #1b1b1b; /* grey strip */
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+
+  z-index: 0;
+}
+
+/* Push main content away from sidebar */
+
+/* Hide left vertical label on mobile */
+@media (max-width: 768px) {
+  .side-label {
+    display: none;
+  }
+
+  .container {
+    margin-left: 20px; /* reset spacing for mobile */
+  }
+}
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Container spacing */
+  .container {
+    margin: 32px auto;
+    padding: 0 18px;   /* 👈 nice breathing space on sides */
+    text-align: left;
+    transform: translateX(0); /* reset desktop shift */
+  }
+
+  /* Name */
+  header.container h1 {
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 4px;
+  }
+
+  /* Section headings */
+  h2 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+
+  /* About text */
+  p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .subT {
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+  }
+
+  /* Work cards */
+  .card {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .card h3 {
+    font-size: 1.05rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  /* Contact section */
+  .contact {
+    gap: 12px;
+  }
+
+  .contact a {
+    font-size: 0.85rem;
+  }
+
+  .contact img {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Phone number */
+  .phone-number {
+    font-size: 0.9rem;
+  }
+}
+/* ===================== */
+/* HERO LAYOUT */
+/* ===================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: 80px;
+}
+
+/* Text side */
+.hero-text {
+  max-width: 600px;
+}
+
+/* Image side */
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin-top: 40px;
+  object-fit: cover;
+  border: 2px solid #000000;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+/* ===================== */
+/* PAGE LOADER */
+/* ===================== */
+
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#page-loader.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Minimal loader (clean + architectural) */
+.loader {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #000;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* =========================
+   MOBILE TYPOGRAPHY FIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Overall breathing */
+  body {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+    row-gap: 24px;
+  }
+
+  /* Name */
+  .hero-text h1 {
+    font-size: 1.8rem;   /* was ~3rem */
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  /* Profile image */
+  .hero-image img {
+    width: 120px;
+    height: 120px;
+    margin-top: 12px;
+  }
+
+  /* Section titles */
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
+
+  /* About text */
+  p {
+    font-size: 0.9rem;
+  }
+
+  .subT {
+    font-size: 0.85rem;
+  }
+
+  /* Work cards */
+  .card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .arrow {
+    font-size: 0.9rem;
+  }
+
+  /* Contact */
+  .contact a {
+    font-size: 0.85rem;
+  }
+
+  .contact img {
+    width: 32px;
+    height: 32px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}

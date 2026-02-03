@@ -158,8 +158,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 120px;          /* 👈 BIG GAP around JPEG */
+  gap: 60px;              /* space between multiple sheets if needed */
+  padding: 60px 0;          /* 👈 BIG GAP around JPEG */
   background: #ffffff;
 }
 
@@ -167,7 +167,8 @@ body {
   max-width: 1200px;       /* keeps it artboard-sized */
   width: 100%;
   height: auto;
-
+  display: block;
+  margin: 0 auto;
   border-radius: 16px;     /* optional, looks clean */
   box-shadow: 0 10px 40px rgba(0,0,0,0.12); /* floating feel */
 }
